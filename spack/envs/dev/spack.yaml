@@ -1,0 +1,104 @@
+# This is a Spack Environment file.
+#
+# It describes a set of packages to be installed, along with
+# configuration settings.
+spack:
+  # add package specs to the `specs` list
+  specs:
+  - peanuts@master
+  - openmpi-peanuts@5.0.0rc12-peanuts fabrics=ucx,cma +internal-pmix +internal-hwloc +romio 
+    ^ucx@1.14.1 +cma 
+  - ior 
+  - rdbench 
+  - h5bench
+  view: true
+  concretizer:
+    unify: true
+  compilers:
+  - compiler:
+      spec: gcc@=12.2.0
+      paths:
+        cc: /usr/bin/gcc
+        cxx: /usr/bin/g++
+        f77: /usr/bin/gfortran
+        fc: /usr/bin/gfortran
+      flags: {}
+      operating_system: debian12
+      target: x86_64
+      modules: []
+      environment: {}
+      extra_rpaths: []
+  packages:
+    perl:
+      externals:
+      - spec: perl@5.36.0~cpanm+open+shared+threads
+        prefix: /usr
+    coreutils:
+      externals:
+      - spec: coreutils@9.1
+        prefix: /usr
+    diffutils:
+      externals:
+      - spec: diffutils@3.8
+        prefix: /usr
+    tar:
+      externals:
+      - spec: tar@1.34
+        prefix: /usr
+    binutils:
+      externals:
+      - spec: binutils@2.40
+        prefix: /usr
+    m4:
+      externals:
+      - spec: m4@1.4.19
+        prefix: /usr
+    findutils:
+      externals:
+      - spec: findutils@4.9.0
+        prefix: /usr
+    cmake:
+      externals:
+      - spec: cmake@3.22.2
+        prefix: /usr/local
+    openssl:
+      externals:
+      - spec: openssl@3.0.11
+        prefix: /usr
+    iwyu:
+      externals:
+      - spec: iwyu@0.18
+        prefix: /usr
+    groff:
+      externals:
+      - spec: groff@1.22.4
+        prefix: /usr
+    curl:
+      externals:
+      - spec: curl@7.88.1+gssapi+ldap+nghttp2
+        prefix: /usr
+    gmake:
+      externals:
+      - spec: gmake@4.3
+        prefix: /usr
+    flex:
+      externals:
+      - spec: flex@2.6.4+lex
+        prefix: /usr
+    git:
+      externals:
+      - spec: git@2.39.2~tcltk
+        prefix: /usr
+      - spec: git@2.45.0+tcltk
+        prefix: /usr/local
+    ninja:
+      externals:
+      - spec: ninja@1.11.1
+        prefix: /usr
+    openssh:
+      externals:
+      - spec: openssh@9.2p1
+        prefix: /usr
+  repos:
+  - /workspaces/peanuts-playground/externals/spack-packages
+

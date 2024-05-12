@@ -6,3 +6,7 @@
 	path = externals/spack-packages
 	url = https://github.com/tsukuba-hpcs/spack-packages.git
   update = merge
+[submodule "externals/ompi-peanuts"]
+	path = externals/ompi-peanuts
+	url = https://github.com/tsukuba-hpcs/ompi-peanuts.git
+  update = merge
