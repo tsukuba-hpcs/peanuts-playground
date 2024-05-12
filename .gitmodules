@@ -1,0 +1,8 @@
+[submodule "externals/peanuts"]
+	path = externals/peanuts
+	url = https://github.com/tsukuba-hpcs/peanuts.git
+  update = merge
+[submodule "externals/spack-packages"]
+	path = externals/spack-packages
+	url = https://github.com/tsukuba-hpcs/spack-packages.git
+  update = merge
