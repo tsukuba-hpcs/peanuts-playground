@@ -107,6 +107,7 @@ RUN \
   && apt-get update \
   && apt-get -y install --no-install-recommends \
     perl \
+    python3-venv \
   # Clean up
   && apt-get autoremove -y \
   && apt-get clean -y \

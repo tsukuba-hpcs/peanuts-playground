@@ -10,7 +10,7 @@ code .
 Open vscode and install the recommended extensions.
 - [Remote Development](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack)
 
-Use the command palette to open the project in a container.
+Use the command palette to open the project in a container.  
 `> Dev Containers: Rebuild and Reopen in Container`
 
 ```console
@@ -18,4 +18,6 @@ Use the command palette to open the project in a container.
 
 spack env create dev spack/envs/dev/spack.yaml
 spack env activate dev
+spack concretize -fU
+spack install
 ```

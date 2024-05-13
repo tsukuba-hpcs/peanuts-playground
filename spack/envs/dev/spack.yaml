@@ -6,10 +6,10 @@ spack:
   # add package specs to the `specs` list
   specs:
   - peanuts@master
-  - openmpi-peanuts@5.0.0rc12-peanuts fabrics=ucx,cma +internal-pmix +internal-hwloc +romio 
-    ^ucx@1.14.1 +cma 
-  - ior 
-  - rdbench 
+  - openmpi-peanuts@5.0.0rc12-peanuts fabrics=ucx,cma +internal-pmix +internal-hwloc
+    +romio ^ucx@1.14.1 +cma
+  - ior
+  - rdbench
   - h5bench
   view: true
   concretizer:
@@ -101,4 +101,3 @@ spack:
         prefix: /usr
   repos:
   - /workspaces/peanuts-playground/externals/spack-packages
-
