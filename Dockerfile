@@ -6,7 +6,7 @@ ENV SPACK_ROOT=/home/vscode/.cache/spack
 ENV CPM_SOURCE_CACHE=/home/vscode/.cache/CPM
 
 # Optionally install the cmake for vcpkg
-COPY ./reinstall-cmake.sh /tmp/
+COPY .devcontainer/reinstall-cmake.sh /tmp/
 
 RUN if [ "${REINSTALL_CMAKE_VERSION_FROM_SOURCE}" != "none" ]; then \
         chmod +x /tmp/reinstall-cmake.sh && /tmp/reinstall-cmake.sh ${REINSTALL_CMAKE_VERSION_FROM_SOURCE}; \
@@ -89,8 +89,7 @@ RUN \
   && apt-get clean -y \
   && rm -rf /var/lib/apt/lists/*
 
-SHELL ["/bin/bash", "-c"]
-COPY spack.sh /etc/profile.d/03-spack.sh
+COPY .devcontainer/spack.sh /etc/profile.d/03-spack.sh
 
 USER vscode
 RUN \

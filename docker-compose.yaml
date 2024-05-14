@@ -6,10 +6,9 @@ x-common: &x-common
   environment:
     MPI_HOSTS: h1,h2,h3,h4
   volumes:
-    - ..:/workspaces/peanuts-playground:cached
+    - .:/workspaces/peanuts-playground:cached
     - spack-root:/home/vscode/.cache/spack
     - spack-settings:/home/vscode/.spack
-    - shared-backend:/shared-backend
   networks:
     - peanuts_net
   cap_add:
@@ -44,4 +43,3 @@ networks:
 volumes:
   spack-root:
   spack-settings:
-  shared-backend:
