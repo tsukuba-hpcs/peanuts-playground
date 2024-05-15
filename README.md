@@ -88,6 +88,10 @@ Perform the following tasks by connecting to chris90 via ssh.
 (Sorry, git clone and build will take a while due to poor NFS)
 
 ```console
+# on chris9x cluster, use /shared/fish/$USER instead of /home/$USER
+mkdir /shared/fish/$USER
+cd /shared/fish/$USER
+
 # checkout
 git clone --recursive git@github.com:tsukuba-hpcs/peanuts-playground.git
 cd peanuts-playground
