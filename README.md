@@ -286,7 +286,7 @@ When visualizing the results of ior, success is indicated if the performance for
 
 |            | Pegasus                             | Chris9x                            |
 | ---------- | ----------------------------------- | ---------------------------------- |
-| PMEM       | Optane DCPMM 300 series (第３世代)  | Optane DCPMM 200 series (第２世代) |
+| PMEM       | Optane DCPMM 300 series             | Optane DCPMM 200 series            |
 | NETWORK    | InfiniBand HDR200                   | InfiniBand EDR                     |
 | CPU        | Xeon Platinum 8468, 2.1GHz 48 cores | Xeon Gold 6326, 2.90GHz 16 cores   |
 | Node count | 100                                 | 2                                  |
