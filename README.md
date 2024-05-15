@@ -102,7 +102,7 @@ source externals/spack/share/spack/setup-env.sh
 
 # build PEANUTS and benckmarks and configuration tools with spack
 spack repo add externals/spack-packages
-spack env create peanuts spack/envs/peanuts/spack.yaml
+spack env create peanuts spack/envs/chris90/spack.yaml
 spack env activate peanuts
 spack concretize -fU
 spack install
