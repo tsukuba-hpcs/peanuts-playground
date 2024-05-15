@@ -108,6 +108,7 @@ spack concretize -fU
 spack install
 
 # prepare interleaved devdax PMEM (requires root privilege)
+# Preparation for DEVDAX is done in advance with root privileges.
 sudo env PATH=$PATH ndctl destroy-namespace all --force
 sudo env PATH=$PATH ndctl create-namespace --mode=devdax
 sudo chmod 666 /dev/dax0.0
