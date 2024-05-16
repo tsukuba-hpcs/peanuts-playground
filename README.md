@@ -285,6 +285,8 @@ When visualizing the results of ior, success is indicated if the performance for
 - Remote Read: 25 GB/s == 23.3 GiB/s
 - Local Read: 84 GiB/s
 
+For reference, we have placed sample chris9x benchmark results in the raw-sample/ directory.
+The initial state of src/ior.ipynb, src/rdbench.ipynb, and src/h5bench.ipynb are visualizations of these benchmark results.
 
 # Differences from PEANUTS paper
 - Pegasus supercomputer vs Chris9x

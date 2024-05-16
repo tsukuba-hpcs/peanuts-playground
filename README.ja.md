@@ -287,6 +287,9 @@ iorを可視化して、32 KiB 2 nodeの性能が
 
 に近い性能が出ていれば成功です。
 
+参考のために、raw-sample/ディレクトリにchris9xのベンチマーク結果をサンプルとして置いてあります。
+src/ior.ipynb, src/rdbench.ipynb, src/h5bench.ipynbの初期状態は、このベンチマーク結果を可視化したものです。
+
 # PEANUTS論文との差異
 - Pegasus supercomputer vs Chris9x
 
