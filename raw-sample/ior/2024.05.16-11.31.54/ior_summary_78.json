@@ -1,0 +1,141 @@
+{
+  "Version": "3.3.0", 
+  "Began": "Thu May 16 13:05:15 2024", 
+  "Command line": "ior -a MPIIO -l timestamp -g -G -1401473791 -k -e -i 1 -s 1 -b 21474836480 -t 2048 -o /shared/fish/hiraga/work/peanuts-playground/raw/ior/2024.05.16-11.31.54/testfile_2K -O summaryFormat=JSON -O summaryFile=/shared/fish/hiraga/work/peanuts-playground/raw/ior/2024.05.16-11.31.54/ior_summary_78.json -w", 
+  "Machine": "Linux chris90", 
+  "tests": [
+    {
+    "TestID": 0, 
+    "StartTime": "Thu May 16 13:05:15 2024"    , "Path": "/shared/fish/hiraga/work/peanuts-playground/raw/ior/2024.05.16-11.31.54","Capacity": "54.6 TiB", "Used Capacity": "34.8%","Inodes": "1117.6 Mi", "Used Inodes" : "3.4%"
+, 
+    "Parameters": {
+      "testID": 0, 
+      "refnum": 0, 
+      "api": "MPIIO", 
+      "platform": "chris(Linux)", 
+      "testFileName": "/shared/fish/hiraga/work/peanuts-playground/raw/ior/2024.05.16-11.31.54/testfile_2K", 
+      "hintsFileName": "(null)", 
+      "deadlineForStonewall": 0, 
+      "stoneWallingWearOut": 0, 
+      "maxTimeDuration": 0, 
+      "outlierThreshold": 0, 
+      "options": "(null)", 
+      "dryRun": 0, 
+      "nodes": 1, 
+      "memoryPerTask": 0, 
+      "memoryPerNode": 0, 
+      "tasksPerNode": 16, 
+      "repetitions": 1, 
+      "multiFile": 0, 
+      "interTestDelay": 0, 
+      "fsync": 1, 
+      "fsyncperwrite": 0, 
+      "useExistingTestFile": 0, 
+      "showHints": 0, 
+      "uniqueDir": 0, 
+      "individualDataSets": 0, 
+      "singleXferAttempt": 0, 
+      "readFile": 0, 
+      "writeFile": 1, 
+      "filePerProc": 0, 
+      "reorderTasks": 0, 
+      "reorderTasksRandom": 0, 
+      "reorderTasksRandomSeed": 0, 
+      "randomOffset": 0, 
+      "checkWrite": 0, 
+      "checkRead": 0, 
+      "preallocate": 0, 
+      "useFileView": 0, 
+      "setAlignment": 1, 
+      "storeFileOffset": 0, 
+      "useSharedFilePointer": 0, 
+      "useStridedDatatype": 0, 
+      "keepFile": 1, 
+      "keepFileWithError": 0, 
+      "quitOnError": 0, 
+      "verbose": 0, 
+      "data packet type": "t", 
+      "setTimeStampSignature/incompressibleSeed": -1401473791, 
+      "collective": 0, 
+      "segmentCount": 1, 
+      "transferSize": 2048, 
+      "blockSize": 21474836480
+    }
+, 
+    "Options": {
+      "api": "MPIIO", 
+      "apiVersion": "(3.1)", 
+      "test filename": "/shared/fish/hiraga/work/peanuts-playground/raw/ior/2024.05.16-11.31.54/testfile_2K", 
+      "access": "single-shared-file", 
+      "type": "independent", 
+      "segments": 1, 
+      "ordering in a file": "sequential", 
+      "ordering inter file": "no tasks offsets", 
+      "nodes": 1, 
+      "tasks": 16, 
+      "clients per node": 16, 
+      "repetitions": 1, 
+      "xfersize": "2048 bytes", 
+      "blocksize": "20 GiB", 
+      "aggregate filesize": "320 GiB"
+    }
+, 
+    "Results": [
+      [             {
+        "access": "write", 
+        "bwMiB": 11902.7086, 
+        "blockKiB": 20971520.0000, 
+        "xferKiB": 2.0000, 
+        "iops": 6094634.6418, 
+        "latency": 0.0000, 
+        "openTime": 0.0015, 
+        "wrRdTime": 27.5278, 
+        "closeTime": 0.0005, 
+        "totalTime": 27.5299
+      }
+]
+]
+, 
+  "max": {
+    "writeMiB": 11902.7086, 
+    "writeMB": 12480.8946
+  }
+
+}
+]
+, 
+"summary": [
+{
+  "operation": "write", 
+  "API": "MPIIO", 
+  "TestID": 0, 
+  "ReferenceNumber": 0, 
+  "segmentCount": 1, 
+  "blockSize": 21474836480, 
+  "transferSize": 2048, 
+  "numTasks": 16, 
+  "tasksPerNode": 16, 
+  "repetitions": 1, 
+  "filePerProc": 0, 
+  "reorderTasks": 0, 
+  "taskPerNodeOffset": 1, 
+  "reorderTasksRandom": 0, 
+  "reorderTasksRandomSeed": 0, 
+  "segmentCount": 1, 
+  "blockSize": 21474836480, 
+  "transferSize": 2048, 
+  "bwMaxMIB": 11902.7086, 
+  "bwMinMIB": 11902.7086, 
+  "bwMeanMIB": 11902.7086, 
+  "bwStdMIB": 0.0000, 
+  "OPsMax": 6094186.8261, 
+  "OPsMin": 6094186.8261, 
+  "OPsMean": 6094186.8261, 
+  "OPsSD": 0.0000, 
+  "MeanTime": 27.5299, 
+  "xsizeMiB": 327680.0000
+}
+]
+, 
+"Finished": "Thu May 16 13:05:42 2024"
+}
