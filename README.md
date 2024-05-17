@@ -209,6 +209,9 @@ We have prepared scripts for running benchmarks on the chris9x cluster with actu
 - `src/rdbench-chris9x.sh`
 - `src/h5bench-chris9x.sh`
 
+These benchmark evaluations aim to reproduce the results presented in the PEANUTS paper.
+IOR is described in Section 4.2, RDBench in Section 4.3, and h5bench in Section 4.4.
+
 Before running, ensure that Spack is enabled.
 ```console
 source externals/spack/share/spack/setup-env.sh
@@ -273,20 +276,17 @@ If you want to try other transfer sizes, uncomment the xfer_size_list variable i
 
 You can visualize the results on the chris9x cluster. To do so, connect to chris90 using VSCode with the Remote SSH extension. Alternatively, copy the log files to your local machine using scp and run Jupyter Notebook within your local devcontainer.
 
+Each graph title plotted in the Jupyter Notebook indicates the corresponding figure in the PEANUTS paper.
+
+## How to Validate and Verify the Results
+
 Preliminary experiments have measured the parallel I/O performance of the PMEM devices on a single node of the chris9x cluster.  
 [range3/pmembench benchmark result](https://github.com/range3/pmembench/blob/4db7408da4a5a5767c93657cc03cd933f3fac61c/eval/README.md)
 
-The blue line in this graph represents the results for the Optane DCPMM 200 series (second generation) on chris9x. The peak write performance is 15 GiB/s, but it drops to about 10 GiB/s when accessed with 16 threads. This is a characteristic of the second generation of Optane DCPMM. For reads, it achieves around 42 GiB/s with 16 threads and a 32 KiB transfer size.
-
-Regarding network performance, the chris9x cluster is equipped with InfiniBand EDR, providing 100 Gbps == 12.5 GB/s per node.
-
-When visualizing the results of ior, success is indicated if the performance for 32 KiB and 2 nodes is close to:
-- Write: 20 GiB/s
-- Remote Read: 25 GB/s == 23.3 GiB/s
-- Local Read: 84 GiB/s
-
 For reference, we have placed sample chris9x benchmark results in the raw-sample/ directory.
 The initial state of src/ior.ipynb, src/rdbench.ipynb, and src/h5bench.ipynb are visualizations of these benchmark results.
+
+In more detail, please refer to overview.pdf.
 
 # Differences from PEANUTS paper
 - Pegasus supercomputer vs Chris9x
@@ -297,6 +297,7 @@ The initial state of src/ior.ipynb, src/rdbench.ipynb, and src/h5bench.ipynb are
 | NETWORK    | InfiniBand HDR200                   | InfiniBand EDR                     |
 | CPU        | Xeon Platinum 8468, 2.1GHz 48 cores | Xeon Gold 6326, 2.90GHz 16 cores   |
 | Node count | 100                                 | 2                                  |
+
 - RDBench could not evaluate weak scaling on 2 nodes due to the limitations of the application, so I wrote a script with strong scaling in chris9x.
 
 # References
