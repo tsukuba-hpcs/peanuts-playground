@@ -100,7 +100,7 @@ python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 
-# prepre spack
+# prepare spack
 source externals/spack/share/spack/setup-env.sh
 
 # build PEANUTS and benckmarks and configuration tools with spack
