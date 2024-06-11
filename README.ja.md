@@ -2,6 +2,12 @@
 
 https://github.com/tsukuba-hpcs/peanuts-playground
 
+## Notice
+このREADMEと[overview.pdf](overview.pdf)は、PEANUTSのアーティファクト評価(AE)のレビュアー向けに作成されました。
+AE中にレビュアーに提供されたchris9xクラスタ(chris90, chris91)へのアクセスおよびアカウントは利用できなくなりました。
+実験を再現するには、Intel Optane DCPMMとRDMA-capable NIC（できればMellanox InfiniBand）を搭載したクラスタが必要です。
+AEのセットアップの詳細については、このREADMEまたは[overview.pdf](overview.pdf)を参照してください。
+
 ## Getting Started
 PEANUTSのお試し環境をDockerコンテナに準備しました。実際のPersitent memoryは利用できませんが、PEANUTSの動作を確認することができます。
 docker composeを利用して、4つのコンテナからなる仮想的なクラスターを構築します。

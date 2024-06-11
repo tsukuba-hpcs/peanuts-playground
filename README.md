@@ -2,6 +2,13 @@
 
 https://github.com/tsukuba-hpcs/peanuts-playground
 
+## Notice
+This README and the accompanying [overview.pdf](overview.pdf) were prepared for reviewers of the artifact evaluation (AE) of PEANUTS.
+Access and accounts for the chris9x cluster (chris90, chris91) provided to reviewers during AE are no longer available.
+To replicate the experiments,
+a cluster equipped with Intel Optane DCPMM and RDMA-capable NICs (preferably Mellanox InfiniBand) is required.
+Please refer to this README or the [overview.pdf](overview.pdf) for details on the AE setup.
+
 ## Getting Started
 
 We have prepared a test environment for PEANUTS in a Docker container. While actual persistent memory is not available, you can verify the operation of PEANUTS. Using Docker Compose, we will build a virtual cluster consisting of four containers. MPI can be utilized between containers using OpenMPI-peanuts.
